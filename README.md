@@ -1,2 +1,6 @@
 # XYTableViewEmpty
 实现UITableView空视图
+
+思路（添加一个UITableView的分类）
+1. 使用Method Swizzling把reloadData方法替换为xy_reloadData方法
+2. 在xy_reloadData方法中通过numberOfSectionsInTableView和tableView:numberOfRowsInSection:判断当前tableView是否有数据
